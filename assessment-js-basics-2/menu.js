@@ -31,7 +31,14 @@
 */
 
 //CODE HERE
-
+const pizza = {
+    name: 'Supreme',
+    price: 16.99,
+    category: 'Entree',
+    popularity: 2,
+    rating: 4.6,
+    tags: ("X-Large", "Family")
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -43,7 +50,7 @@
 */
 
 //CODE HERE
-
+console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
