@@ -34,8 +34,8 @@ const cart = [
 ]
 
 //CODE HERE
-let newTotal = cart.reduce((total, cart) => total + cart.price, 0)
-console.log(newTotal)
+const summedPrice = cart.reduce((total, cart) => total + cart.price, 0)
+console.log(summedPrice)
 
 
 
@@ -56,7 +56,7 @@ console.log(newTotal)
 
 //CODE HERE
 const calcFinalPrice = (cart, coupon, tax) => (cart + (cart * tax) - coupon)
-console.log(calcFinalPrice(26.97, 3.99, .08))
+console.log(calcFinalPrice(26.97, 10, .06))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -84,7 +84,7 @@ console.log(calcFinalPrice(26.97, 3.99, .08))
     total: number, letting restaurant know what to charge, contains integers
     phone: string, so customer can be contacted about order, contains integers but needs to be separated by punctuation
     adress: string, for delivery, will contain both integers and words
-    requests: string for allergies,etc. i chose a string because it could be numbers or letters
+    requests: array for allergies,etc. i chose an array because it could be numbers or letters
 
 
 */
@@ -95,4 +95,5 @@ console.log(calcFinalPrice(26.97, 3.99, .08))
 */
 
 //CODE HERE
-const customer = {name: "Bill Bob", phone: '(555)999-0098', address: '1234 String Rd.', total: 99.99, requests: 'none'}
+const customer = {name: "Bill Bob", phone: '(555)999-0098', address: '1234 String Rd.', total: 99.99, requests: ['none']}
+console.log(customer)
