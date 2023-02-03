@@ -157,7 +157,7 @@ let foodArr = [
 //CODE HERE
 const foodTags = foodArr.filter(obj => obj.tags === 'Family')
 console.log(foodTags)
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+
 
 
 
@@ -201,13 +201,12 @@ console.log(foodTags)
 */
 
 //CODE HERE
-function filterByProperty (arr, type, data){
-let newArr = [];
-const newFoodArr = foodArr.filter(arr => arr.type > 4.2);
-    newArr.push(newFoodArr)
-    return newArr
-}
-console.log(filterByProperty())
+function filterByProperty(element){
+    let newFilter = foodArr.filter(element => element.price < 15.99)
+     return newFilter
+     } 
+ 
+     console.log(filterByProperty(foodArr))
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -216,10 +215,9 @@ console.log(filterByProperty())
 */
 
 //CODE HERE
-// function filterByProperty (arr, type, data){
-//     let newArr = [];
-//     const newFoodArr = foodArr.filter(arr => arr.type > data);
-//         newArr.push(newFoodArr)
-//         return newArr
-//     }
-//     console.log(filterByProperty(foodArr,'price', 15.99))
+function filterByProperty(element){
+    let newFilter = foodArr.filter(element => element.rating > 4)
+     return newFilter
+     } 
+ 
+     console.log(filterByProperty(foodArr))
