@@ -60,7 +60,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
+console.log(pizza['price'])
+console.log(pizza.price)
 
 /*
     Third, destructure the price off of the
@@ -70,7 +71,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
+let {price} = pizza
+console.log(`The pizza costs $${price}.`)
 
 /*
     Fourth, and last, destructure the category
@@ -80,7 +82,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
+let {category} = pizza
+console.log(`This pizza is ${category} size.`)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -95,7 +98,48 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
+let foodArr = [
+    {
+        name: 'Supreme',
+        price: 16.99,
+        category: 'Entree',
+        popularity: 2,
+        rating: 4.6,
+        tags: ("X-Large", "Family")
+    },
+    {
+        name: 'Meat',
+        price: 15.99,
+        category: 'Entree',
+        popularity: 1,
+        rating: 4.9,
+        tags: ("Large", "Feeds 2")
+    },
+    {
+        name: 'Pepperoni',
+        price: 13.99,
+        category: 'Entree',
+        popularity: 2,
+        rating: 5,
+        tags: ("Large", "Muy Deliciosa")
+    },
+    {
+        name: 'Bread Sticks',
+        price: 7.99,
+        category: 'appetizer',
+        popularity: 3,
+        rating: 3.9,
+        tags: ("So Good", "Garlic Bread")
+    },
+    {
+        name: 'Cookies',
+        price: 9.99,
+        category: 'dessert',
+        popularity: 1,
+        rating: 4.2,
+        tags: ("Six", "Family")
+    }
+]
 
 
 //////////////////PROBLEM 4////////////////////
@@ -111,7 +155,8 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
+const foodTags = foodArr.filter(obj => obj.tags === 'Family')
+console.log(foodTags)
 // const filteredFood = foodArr.filter(/* CALLBACK HERE */)
 
 
@@ -156,8 +201,13 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
-
-
+function filterByProperty (arr, type, data){
+let newArr = [];
+const newFoodArr = foodArr.filter(arr => arr.type > 4.2);
+    newArr.push(newFoodArr)
+    return newArr
+}
+console.log(filterByProperty())
 /*
     Invoke the `filterByProperty` function passing
     in a value for each paramter.
@@ -166,3 +216,10 @@ console.log(pizza.popularity)
 */
 
 //CODE HERE
+// function filterByProperty (arr, type, data){
+//     let newArr = [];
+//     const newFoodArr = foodArr.filter(arr => arr.type > data);
+//         newArr.push(newFoodArr)
+//         return newArr
+//     }
+//     console.log(filterByProperty(foodArr,'price', 15.99))

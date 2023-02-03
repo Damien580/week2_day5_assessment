@@ -122,8 +122,8 @@ const deals = [
 */
 
 //CODE HERE
-
-
+deals[0].title = '10% Off!'
+console.log(deals)
 /*
     The restaurant is going to continue its
     family deal for another month. 
@@ -138,3 +138,5 @@ const deals = [
 */
 
 //CODE HERE
+deals[1].desc = '   This deal lasts until the end of April! '
+console.log(deals)
